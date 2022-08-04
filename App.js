@@ -1,20 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,Image } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+    <Image 
+          style={styles.imageStyles}
+          source={require("./assets/Avatar.png")}
+        />
+      <Text style={styles.welcomeMsg}>Welcome back,</Text>
+      <Text style={styles.name}>Rahul Kumar</Text>
     </View>
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  welcomeMsg: {
+    marginTop: 70,
+    marginLeft: 50,
+    color:"grey",
+    fontSize: 15,
+    lineHeight: 17
   },
+  name:{
+    paddingTop: 10,
+    marginLeft: 50,
+    fontSize: 30,
+
+  },
+  imageStyles:{
+    alignItems:"flex-end",
+    marginTop: 70
+  }
 });
